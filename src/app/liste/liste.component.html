@@ -1,0 +1,49 @@
+<div class="panel panel-primary class">
+    <div clas="panel-heading"><h2>Gestion des Produits </h2></div>
+
+</div>
+<button class="btn btn-warning b" (click)="change2()">Liste des produits</button>
+<a routerLink='/page1'><button class="btn btn-info" (click)="change()">Ajouter un produit</button></a>
+
+<div class="panel panel-primary">
+    <div *ngIf="b==false"> <router-outlet></router-outlet></div>
+   
+    <div class="panel-body">
+        
+        <table class="table table-striped" *ngIf="b==true">
+            
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Quantite</th>
+                    <th scope="col">Prix</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Dell 225</td>
+                    <td>10</td>
+                    <td>1500</td>
+                    <td><button class="btn btn-danger">Supprimer</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>HP 666</td>
+                    <td>15</td>
+                    <td>1800</td>
+                    <td><button class="btn btn-danger">Supprimer</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Lenovo7</td>
+                    <td>17</td>
+                    <td>2200</td>
+                    <td><button class="btn btn-danger">Supprimer</button></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+    </div>
+</div>
